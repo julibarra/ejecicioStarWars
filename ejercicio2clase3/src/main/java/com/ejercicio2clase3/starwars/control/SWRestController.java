@@ -21,7 +21,7 @@ public class SWRestController {
     @PostMapping(path = "/starwars/{name}")
     public ResultadoDTO crearRespuesta(@PathVariable String name){
 
-        return service.devolverPersonajes(name);
+        return service.getCharacter(name);
     }
 
 }

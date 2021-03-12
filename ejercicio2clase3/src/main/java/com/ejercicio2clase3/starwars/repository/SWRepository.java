@@ -28,11 +28,11 @@ public class SWRepository implements ISWRepository {
         this.personajes = loadFromDB();
     }
     @Override
-    public List<PersonajeDTO> buscarPorNombre(String nombre) {
+    public List<PersonajeDTO> searchByName(String name) {
         return this.personajes.stream()
                 .filter(personaje -> personaje.getName()
                         .toLowerCase()
-                        .contains(nombre.toLowerCase()))
+                        .contains(name.toLowerCase()))
                 .collect(Collectors.toList());
     }
 
@@ -56,6 +56,7 @@ public class SWRepository implements ISWRepository {
         }
         return ret;
     }
+    
 }
 
 

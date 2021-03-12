@@ -16,10 +16,10 @@ public class SWService implements ISWService {
     private ISWRepository repository;
 
     @Override
-    public ResultadoDTO devolverPersonajes(String name) {
+    public ResultadoDTO getCharacter(String name) {
         ResultadoDTO resultado=new ResultadoDTO();
 
-        resultado.setNombres(nombreCompletos(repository.buscarPorNombre(name)));
+        resultado.setNombres(nombreCompletos(repository.searchByName(name)));
         return resultado;
     }
 
