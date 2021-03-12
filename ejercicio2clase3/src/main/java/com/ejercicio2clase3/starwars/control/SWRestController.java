@@ -17,7 +17,11 @@ public class SWRestController {
     private ISWService service;
 
 
-
+    /**
+     * This method return a json of all the characters that have the name given by the user
+     * @param name
+     * @return json
+     */
     @PostMapping(path = "/starwars/{name}")
     public ResultadoDTO crearRespuesta(@PathVariable String name){
 
